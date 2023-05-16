@@ -1,43 +1,31 @@
 import java.util.Scanner;
+public class MainClass {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("\ninserire i dati: marca,modello,prezzo,pollici,ram,touch\n");
 
-// Chiamare la classe col proprio cognome
-public class MainClass
-{
-	static Scanner in = new Scanner(System.in);
-	
-	public static void main(String[] args)
-	{
-		while(true)
-		{
-			stampaMenu();
-			int scelta = Integer.parseInt(in.nextLine());
-			switch(scelta)
-			{
-				//aggiungere, togliere casi a seconda delle proprie scelte
-				case 1:
-					//Inserire metodo statico
-				break;
-				case 2:
-					//Inserire metodo statico
-				break;
-				case 3:
-					//Inserire metodo statico
-				break;
-				default:
-					System.out.println("Scelta errata, riprova!");
+        String in1 = scan.nextLine();
+        String in2 = scan.nextLine();
+        double in3 = scan.nextInt();
+        double in4 = scan.nextInt();
+        int in5 = scan.nextInt();
+        boolean in6 = scan.nextBoolean();
 
-			}
-		}
-	}
-	static void stampaMenu()
-	{
-		// Modificare il menù secondo le proprie scelte
-		System.out.println("1 - Es n. * - Titolo es. *");
-		System.out.println("2 - Es n. * - Titolo es. *");
-		System.out.println("3 - Es n. * - Titolo es. *");
-		System.out.println("4 - Es n. * - Titolo es. *");
-		System.out.println("5 - Es n. * - Titolo es. *");
-	}
-	
-	// Aggiungere qui i metodi statici relativi agli esercizi scelti
+        telefono t1 = new telefono(in1,in2,in3,in4,in5,in6);
+        System.out.println();
+        t1.stampa();
+        System.out.println(t1.fasciaPrezzo(in3));
+        System.out.println(t1.tipotelefono(in4));
+        
+        System.out.println();
+        telefono t2 = new telefono();
+        t2.stampa();
+        System.out.println(t2.fasciaPrezzo(t2.getPrezzoLancio()));
+        System.out.println(t2.tipotelefono(t2.getPollici()));
+
+
+
+
+    }
+    
 }
